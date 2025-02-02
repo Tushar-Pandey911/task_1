@@ -1,0 +1,334 @@
+/* styles.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.5;
+    color: black;
+    width: 100%;
+}
+/* Improvise-1 */
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 2rem 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #f5f5f5;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007cba; /* Logitech blue */
+}
+
+#nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+#nav-links li {
+    margin-right: 20px;
+}
+
+#nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+/* Hero Section */
+.hero {
+    text-align: left;
+    color: white;
+
+    /* Background properties */
+    background-image: url('https://resource.logitech.com/w_1800,h_1800,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/mx-brio-hpb-desktop.jpg?v=1');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    /* Height: pick a suitable min-height so users see a hero-sized area */
+    min-height: 80vh;
+
+    /* Optional padding */
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+.hero button {
+    margin: 10px;
+    padding: 12px 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.hero button:hover{
+    background-color: transparent;
+    color: black;
+    border: white;
+}
+
+/* Featured Section */
+/* Featured Section Styles */
+.featured {
+    padding: 4rem 1.5rem;
+    background: #f8f9fa;
+}
+
+.featured-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.featured-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.featured-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.featured-image {
+    position: relative;
+    padding-top: 70%; /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.featured-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-content {
+    padding: 1.5rem;
+}
+
+.featured-content h2 {
+    font-size: 1.5rem;
+    color: #2d2d2d;
+    margin-bottom: 0.75rem;
+}
+
+.featured-content p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.featured-link {
+    display: inline-block;
+    color: #007cba;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.featured-link:hover {
+    color: #005f8b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .featured {
+        padding: 2rem 1rem;
+    }
+    
+    .featured-content h2 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Shop Series Styles */
+.shop-series {
+    padding: 4rem 1.5rem;
+    background: white;
+}
+
+.series-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2d2d2d;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.series-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.series-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    position: relative;
+    padding-top: 100%; /* 1:1 aspect ratio */
+}
+
+.card-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.series-content {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    z-index: 2;
+}
+
+.series-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    margin: 0;
+}
+
+/* Wide Card */
+.wide-card {
+    grid-column: span 2;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .series-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .wide-card {
+        grid-column: span 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .shop-series {
+        padding: 2rem 1rem;
+    }
+    
+    .section-heading {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    
+    .series-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .wide-card {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .series-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .wide-card {
+        grid-column: span 1;
+    }
+    
+    .series-title {
+        font-size: 1.25rem;
+    }
+}
+.item img,
+.series-grid img,
+.product-grid img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+/* Footer Styles */
+footer {
+    background-color: #333; /* Dark footer background */
+    color: white; /* White text for contrast */
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
